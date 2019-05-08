@@ -1,0 +1,197 @@
+--Query to find the bottom 5 Census Blocks with Lowest Family Income--
+
+
+
+SELECT w.census_group,w.family_income,g.latitude,g.longitude 
+FROM  family_income w,geographic_data g 
+where w.census_group=g.census_group AND w.family_income != 0 
+AND w.census_group is not null 
+ORDER BY w.family_income ASC limit 5;
+
+
+--Query to find the top 5 Census Blocks with Highest Family Income--
+
+
+
+
+SELECT w.census_group,w.family_income,g.latitude,g.longitude 
+FROM  family_income w,geographic_data g 
+where w.census_group=g.census_group AND w.family_income != 0 
+AND w.census_group is not null 
+ORDER BY w.family_income DESC limit 5;
+
+
+--Query to find the top 5 Census Blocks with Health Insurance-- 
+
+
+
+
+ 
+
+
+SELECT w.census_group,w.insurance,g.latitude,g.longitude 
+FROM   health_insurance w,geographic_data g 
+where w.census_group=g.census_group AND w.insurance != 0 
+AND w.census_group is not null 
+ORDER BY w.insurance DESC limit 5;
+ 
+
+
+
+--Query to find the bottom 5 Census Blocks with Health Insurance--
+ 
+
+
+SELECT w.census_group,w.insurance,g.latitude,g.longitude 
+FROM   health_insurance w,geographic_data g 
+where w.census_group=g.census_group AND w.insurance != 0 
+AND w.census_group is not null 
+ORDER BY w.insurance ASC limit 5;
+ 
+
+
+--Query to find the top 5 Census Blocks with Highest Per-Capita-Income-- 
+
+
+SELECT w.census_group,w.per_capita_income,g.latitude,g.longitude 
+FROM   per_capita_income w,geographic_data g 
+where w.census_group=g.census_group AND w.per_capita_income != 0 
+AND w.census_group is not null 
+ORDER BY w.per_capita_income DESC limit 5;
+
+ 
+
+--Query to find the bottom 5 Census Blocks with Lowest Per-Capita-Income-- 
+
+
+SELECT w.census_group,w.per_capita_income,g.latitude,g.longitude 
+FROM   per_capita_income w,geographic_data g 
+where w.census_group=g.census_group AND w.per_capita_income != 0 
+AND w.census_group is not null 
+ORDER BY w.per_capita_income ASC limit 5;
+
+ 
+
+
+--Query to find the top 5 Census Blocks with Highest Poverty-Status--  
+
+
+SELECT w.census_group,w.poverty_status,g.latitude,g.longitude 
+FROM   poverty_status w,geographic_data g 
+where w.census_group=g.census_group AND w.poverty_status != 0 
+AND w.census_group is not null 
+ORDER BY w.poverty_status DESC limit 5;
+  
+  
+
+--Query to find the bottom 5 Census Blocks with Lowest Poverty-Status--  
+  
+
+
+SELECT w.census_group,w.poverty_status,g.latitude,g.longitude 
+FROM   poverty_status w,geographic_data g 
+where w.census_group=g.census_group AND w.poverty_status != 0 
+AND w.census_group is not null 
+ORDER BY w.poverty_status ASC limit 5;
+  
+
+
+
+--Query to find the top 5 Census Blocks with Highest Male Population--  
+  
+
+
+SELECT w.census_group,w.male_population,g.latitude,g.longitude 
+FROM   Sex_Age w,geographic_data g 
+where w.census_group=g.census_group AND w.male_population != 0 
+AND w.census_group is not null 
+ORDER BY w.male_population DESC limit 5;
+  
+  
+
+
+--Query to find the top 5 Census Blocks with Highest Female Population--  
+
+
+SELECT w.census_group,w.female_population,g.latitude,g.longitude 
+FROM   Sex_Age w,geographic_data g 
+where w.census_group=g.census_group AND w.female_population != 0 
+AND w.census_group is not null 
+ORDER BY w.female_population DESC limit 5;
+
+  
+
+
+--Query to find the bottom 5 Census Blocks with Lowest Male Population-- 
+ 
+
+
+SELECT w.census_group,w.male_population,g.latitude,g.longitude 
+FROM   Sex_Age w,geographic_data g 
+where w.census_group=g.census_group AND w.male_population != 0 
+AND w.census_group is not null 
+ORDER BY w.male_population ASC limit 5;
+ 
+ 
+ 
+ 
+
+
+--Query to find the bottom 5 Census Blocks with Lowest Female Population--  
+ 
+
+
+SELECT w.census_group,w.female_population,g.latitude,g.longitude 
+FROM   Sex_Age w,geographic_data g 
+where w.census_group=g.census_group AND w.female_population != 0 
+AND w.census_group is not null 
+ORDER BY w.female_population ASC limit 5;
+ 
+
+
+
+--Query to find the top 5 Census Blocks with Highest Population--  
+	
+
+
+SELECT w.census_group,w.total_population,g.latitude,g.longitude 
+FROM   Sex_Age w,geographic_data g 
+where w.census_group=g.census_group AND w.total_population != 0 
+AND w.census_group is not null 
+ORDER BY w.total_population DESC limit 5;
+	
+	
+
+--Query to find the bottom 5 Census Blocks with Lowest Population--  
+	
+
+
+SELECT w.census_group,w.total_population,g.latitude,g.longitude 
+FROM   Sex_Age w,geographic_data g 
+where w.census_group=g.census_group AND w.total_population != 0 
+AND w.census_group is not null 
+ORDER BY w.total_population ASC limit 5;
+
+
+
+--Query to find the top 5 Census Blocks with Highest Wage-Income-- 
+
+
+
+SELECT w.census_group,w.total_income,g.latitude,g.longitude 
+FROM   wage_income w,geographic_data g 
+where w.census_group=g.census_group AND w.total_income != 0 
+AND w.census_group is not null 
+ORDER BY w.total_income DESC limit 5;
+
+
+
+--Query to find the bottom 5 Census Blocks with Lowest Population-- 
+
+
+
+SELECT w.census_group,w.total_income,g.latitude,g.longitude 
+FROM   wage_income w,geographic_data g 
+where w.census_group=g.census_group AND w.total_income != 0 
+AND w.census_group is not null 
+ORDER BY w.total_income ASC limit 5;

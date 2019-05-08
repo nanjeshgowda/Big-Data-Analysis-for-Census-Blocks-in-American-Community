@@ -1,0 +1,50 @@
+--Create Table for the Geographic Data--
+
+CREATE EXTERNAL TABLE IF NOT EXISTS Geographic_Data ( Census_Group BIGINT, Amount_Land BIGINT, Amount_Water BIGINT, Latitude BIGINT, Longitude BIGINT )
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
+STORED AS TEXTFILE LOCATION '/user/sshanth/Census_Data/Geographic_Data' TBLPROPERTIES ('skip.header.line.count'='1');
+
+
+
+--Create Table for Family Income with respect to Census Blocks--
+
+CREATE EXTERNAL TABLE IF NOT EXISTS Family_Income (Census_Group BIGINT,	Family_Income BIGINT) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
+STORED AS TEXTFILE LOCATION '/user/sshanth/Census_D  ata/Family_Income' TBLPROPERTIES ('skip.header.line.count'='1');
+
+
+--Create Table for Health Insurance with respect to Census Blocks--
+
+
+CREATE EXTERNAL TABLE IF NOT EXISTS Health_Insurance (Census_Group BIGINT, Insurance BIGINT) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
+STORED AS TEXTFILE LOCATION '/user/sshanth/Census_Data/Health_Insurance' TBLPROPERTIES ('skip.header.line.count'='1');
+
+
+--Create Table for Per-Capita-Income with respect to Census Blocks--
+
+
+
+CREATE EXTERNAL TABLE IF NOT EXISTS Per_Capita_Income (Census_Group BIGINT, Per_Capita_Income BIGINT) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
+STORED AS TEXTFILE LOCATION '/user/sshanth/Census_Data/Per_Capita_Income' TBLPROPERTIES ('skip.header.line.count'='1');
+
+
+
+--Create Table for Poverty-Status with respect to Census Blocks--
+
+
+CREATE EXTERNAL TABLE IF NOT EXISTS Poverty_Status (Census_Group BIGINT, Poverty_Status BIGINT) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
+STORED AS TEXTFILE LOCATION '/user/sshanth/Census_Data/Poverty_Status' TBLPROPERTIES ('skip.header.line.count'='1');
+
+
+
+--Create Table for Population corresponding Age and Sex with respect to Census Blocks--
+
+
+CREATE EXTERNAL TABLE IF NOT EXISTS Sex_Age (Census_Group BIGINT, Total_Population BIGINT, Male_Population BIGINT, Female_Population BIGINT) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
+STORED AS TEXTFILE LOCATION '/user/sshanth/Census_Data/Sex_Age' TBLPROPERTIES ('skip.header.line.count'='1');
+
+
+--Create Table for Wage-Income with respect to Census Blocks--
+
+
+CREATE EXTERNAL TABLE IF NOT EXISTS Wage_Income (Census_Group BIGINT, Total_Income BIGINT, Salaried_Wages BIGINT, Non_Salaried_Wages BIGINT) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
+STORED AS TEXTFILE LOCATION '/user/sshanth/Census_Data/Wage_Income' TBLPROPERTIES ('skip.header.line.count'='1');
